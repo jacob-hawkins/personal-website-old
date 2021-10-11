@@ -32,6 +32,11 @@ nav span:hover {
     transition: 0.4s ease-out;
 }
 
+.grid {
+    display: grid;
+    place-items: center;
+}
+
 .line1 {
     grid-column: 1/1;
     grid-row: 1/1;
@@ -191,19 +196,25 @@ section h3 {
     font-size: 25px;
 }
 
+#bottomlink1 {
+    margin-left: 43vw;
+    margin-bottom: 30px;
+}
+
+#bottomlink2 {
+    margin-left: 2vw;
+    margin-bottom: 30px;
+}
+
 #github2 {
     width: 7vw;
     height: auto;
-    margin-left: 43vw;
-    margin-bottom: 30px;
     transform: translatey(-5px);
 }
 
 #linkedin2 {
     width: 10vw;
     height: auto;
-    margin-left: 2vw;
-    margin-bottom: 30px;
 }
 
 #about img {
@@ -215,15 +226,13 @@ section h3 {
     margin-left: auto;
 }
 
-/* .typed {
-    --typedCharacters: 20;
+.typed {
+    --typedCharacters1: 22;
     --typeSpeed: 2s;
 
-    margin-left: 37vw;
     font-family: 'PT Mono', monospace;
-    font-size: 20px;
     position: relative;
-    display: inline-block;
+    top: 40vh;
 }
 
 .typed::before,
@@ -238,15 +247,49 @@ section h3 {
 
 .typed::before {
     background: black;
-    animation: typing var(--typeSpeed) steps(var(--typedCharacters)) forwards;
+    animation: typing var(--typeSpeed) steps(var(--typedCharacters1)) forwards;
 }
 
 .typed::after {
     width: 0.5em;
     background: white;
     animation: 
-        typing var(--typeSpeed) steps(var(--typedCharacters)) forwards,
-        disapear 1s 1 calc(var(--typeSpeed) + 300ms);
+        typing var(--typeSpeed) steps(var(--typedCharacters1)) forwards,
+        disappear 5ms ease calc(var(--typeSpeed) + 250ms) forwards;
+}
+
+
+
+.typed2 {
+    --typedCharacters2: 19;
+
+    font-family: 'PT Mono', monospace;
+    position: relative;
+    top: 60vh;
+    /* outline: 2px solid red; */
+}
+
+.typed2::before,
+.typed2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.typed2::before {
+    background: black;
+    animation: typing var(--typeSpeed) steps(var(--typedCharacters2)) calc(var(--typeSpeed) + 300ms) forwards;
+}
+
+.typed2::after {
+    width: 0.5em;
+    background: black;
+    animation: 
+        appear 5ms ease calc(var(--typeSpeed) + 270ms) forwards,
+        typing var(--typeSpeed) steps(var(--typedCharacters2)) calc(var(--typeSpeed) + 300ms) forwards;
 }
 
 @keyframes typing {
@@ -255,8 +298,14 @@ section h3 {
     }
 }
 
-@keyframes disapear {
-    to  {
-        transform: translateY(-500px);
+@keyframes disappear {
+    to {
+        background: black;
     }
-} */
+}
+
+@keyframes appear {
+    to {
+        background: white;
+    }
+}
