@@ -4,17 +4,25 @@ html {
 }
 
 body {
-    --typeSpeed: 2s;
-
     margin: 0;
     padding: 0;
     background-color: black;
     color: white;
     font-family: 'Rubik', sans-serif;
     width: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+  
 nav {
+    display: grid;
+    grid-template-columns: calc(100vw - 95px) 45px 45px;
+    align-items: center;
+    vertical-align: center;
     position: fixed;
     width: 100%;
     height: 60px;
@@ -24,24 +32,18 @@ nav {
 }
 
 nav span {
-    font-size: 40px;
-    padding-left: 10px;
+    font-size: 3em;
+    padding-left: 0.5rem;
+    margin-top: -5px;
 }
 
 nav span:hover {
     transition: 0.4s ease-out;
 }
 
-.grid {
-    display: grid;
-    place-items: center;
-}
-
 .line1 {
-    grid-column: 1/1;
-    grid-row: 1/1;
-    width: 55px;
-    height: 55px;
+    width: 70px;
+    height: 70px;
     display: inline-block;
 }
 
@@ -77,21 +79,19 @@ a {
 }
 
 #toplink1 {
-    height: 45px;
-    width: 45px;
-    margin-left: 85vw;
+    height: 60px;
+    width: 60px;
 }
 
 #toplink2 {
-    height: 45px;
-    width: 45px;
-    margin-left: 0px;
+    height: 60px;
+    width: 60px;
 }
 
 #linkedin {
-    display: inline-block;
+    /* display: inline-block; */
     height: 45px;
-    transform: translateY(7px);
+    margin-top: 3px;
 }
 
 #linkedin:hover {
@@ -103,7 +103,7 @@ a {
     /* display: block; */
     height: 45px;
     width: auto;
-    transform: translateY(7px);
+    margin-top: 3px;
 }
 
 #github:hover {
@@ -124,33 +124,33 @@ a {
     transition: 0.5s;
     border-right: 1px solid white;
     transform: translateX(-1px);
-  }
+}
 
-  .sidenav a {
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 40px;
     color: #818181;
     display: block;
-  }
+}
   
-  .sidenav a:hover {
+.sidenav a:hover {
     color: #f1f1f1;
-  }
+}
   
-  .sidenav .closebtn {
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
     transition: 0.5s;
-  }
+}
   
-  @media screen and (max-height: 450px) {
+@media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
-  }
+}
 
 .title {
     font-family: 'Rock Salt', cursive;
@@ -186,18 +186,42 @@ a {
     filter: blur(2em)
 } */
 
-section h3 {
-    font-size: 50px;
-    margin-left: 5vw;
+#grid {
+    margin: 5rem auto;
+    width: min(90%, 75rem);
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
 }
 
-#contact h3 {
+.card {
+    width: 100%;
+    background-color: #2d3436;
+    border-radius: 20px;
+}
+
+.card:hover {
+    background-color: #636e72;
+}
+
+@media (min-width: 55em) {
+    #grid {
+        grid-template-columns:  33% 33% 33%;
+    }
+}
+
+#grid div h3 {
+    font-size: 2.5em;
     text-align: center;
-    font-size: 25px;
+}
+
+section h3 {
+    font-size: 2.5em;
+    text-align: center;
 }
 
 #bottomlink1 {
-    margin-left: 43vw;
+    margin-left: 41.5vw;
     margin-bottom: 30px;
 }
 
@@ -218,94 +242,33 @@ section h3 {
 }
 
 #about img {
-    display: block;
     border-radius: 100%;
     height: 30vh;
     width: auto;
-    margin-right: 15vw;
-    margin-left: auto;
+    margin-right: 0vw;
 }
 
-.typed {
-    --typedCharacters1: 22;
-    --typeSpeed: 2s;
 
-    font-family: 'PT Mono', monospace;
-    position: relative;
-    top: 40vh;
+
+
+/* pop up card */
+.card a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #818181;
+    display: block;
 }
-
-.typed::before,
-.typed::after {
-    content: "";
+  
+.card a:hover {
+    color: #f1f1f1;
+}
+  
+.card .closebtn {
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.typed::before {
-    background: black;
-    animation: typing var(--typeSpeed) steps(var(--typedCharacters1)) forwards;
-}
-
-.typed::after {
-    width: 0.5em;
-    background: white;
-    animation: 
-        typing var(--typeSpeed) steps(var(--typedCharacters1)) forwards,
-        disappear 5ms ease calc(var(--typeSpeed) + 250ms) forwards;
-}
-
-
-
-.typed2 {
-    --typedCharacters2: 19;
-
-    font-family: 'PT Mono', monospace;
-    position: relative;
-    top: 60vh;
-    /* outline: 2px solid red; */
-}
-
-.typed2::before,
-.typed2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.typed2::before {
-    background: black;
-    animation: typing var(--typeSpeed) steps(var(--typedCharacters2)) calc(var(--typeSpeed) + 300ms) forwards;
-}
-
-.typed2::after {
-    width: 0.5em;
-    background: black;
-    animation: 
-        appear 5ms ease calc(var(--typeSpeed) + 270ms) forwards,
-        typing var(--typeSpeed) steps(var(--typedCharacters2)) calc(var(--typeSpeed) + 300ms) forwards;
-}
-
-@keyframes typing {
-    to  {
-        left: 100%;
-    }
-}
-
-@keyframes disappear {
-    to {
-        background: black;
-    }
-}
-
-@keyframes appear {
-    to {
-        background: white;
-    }
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    transition: 0.5s;
 }

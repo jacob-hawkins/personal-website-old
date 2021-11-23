@@ -14,3 +14,18 @@ function closeNav() {
         open = false;
     }
 }
+
+function openCard() {
+    if (open == false) {
+        document.getElementById("aboutCard").style.width = "250px";
+        open = true;
+    }
+}
+
+function closeCard() {
+    if (open == true) {
+
+        document.getElementById("aboutCard").style.width = "0";
+        open = false;
+    }
+}

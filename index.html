@@ -23,6 +23,7 @@
     <header style="height: 100vh; width: 100%;">
         <nav>
             <div class="line1">
+                <!-- <span id="a">&#9776;</span> -->
                 <span id="a">&#9776;</span>
                 <span onclick="openNav()" id="b">&#62;</span>
             </div>
@@ -44,28 +45,31 @@
             </a>
         </nav>
 
-        <div class="grid">
+        <!-- <div class="grid">
             <h1 class="typed">Hey, I'm Jacob Hawkins</h1>
             <p class="typed2">welcome to the site</p>
-        </div>
+        </div> -->
 
-        <!-- <h1 class="title" id="title">Jacob</h1>
+        <h1 class="title" id="title">Jacob</h1>
         <h1 class="title" id="title2">Hawkins</h1> -->
         <!-- <span id="shadow"> </span> -->
     </header>
 
-    <section id="about">
-        <h3>About me</h3>
-        <img src="photos/IMG_9008.jpg" alt="me">
-    </section>
+    <div id="grid">
+        <div id="about" class="card" onclick="openCard()">
+            <h3>About me</h3>
+            <img src="photos/IMG_9008.jpg" alt="me">
+            <p>I am a computer science major at the University of Tennessee.</p>
+        </div>
 
-    <section id="job">
-        <h3>Job & Volunteer Experience</h3>
-    </section>
+        <div id="job" class="card">
+            <h3>Job & Volunteer Experience</h3>
+        </div>
 
-    <section id="project">
-        <h3>Projects</h3>
-    </section>
+        <div id="project" class="card">
+            <h3>Projects</h3>
+        </div>
+    </div>
 
     <section id="contact">
         <h3>Contact</h3>
@@ -93,7 +97,13 @@
         </a>
     </section>
 
-
+    <!-- <div id="aboutCard" class="bigCard">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#about">About</a>
+        <a href="#job">Job & Volunteer Experience</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+    </div> -->
 
 
 
