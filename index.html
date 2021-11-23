@@ -20,15 +20,17 @@
         <a href="#contact">Contact</a>
     </div>
 
+    <div id="aboutCard" class="card">
+        <a href="javascript:void(0)" class="closeCard" onclick="closeCard()">&times;</a>
+        <img src="photos/IMG_9008.jpg" alt="me">
+    </div>
+
     <header style="height: 100vh; width: 100%;">
         <nav>
             <div class="line1">
-                <!-- <span id="a">&#9776;</span> -->
                 <span id="a">&#9776;</span>
                 <span onclick="openNav()" id="b">&#62;</span>
             </div>
-
-            <!-- <span class="typed">Welcome to the Site!</span> -->
 
             <a href="https://github.com/jacob-hawkins?tab=repositories" target="_blank" id="toplink1">
                 <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="github">
@@ -56,17 +58,17 @@
     </header>
 
     <div id="grid">
-        <div id="about" class="card" onclick="openCard()">
+        <div id="about" class="cardbefore" onclick="openCard()">
             <h3>About me</h3>
-            <img src="photos/IMG_9008.jpg" alt="me">
+
             <p>I am a computer science major at the University of Tennessee.</p>
         </div>
 
-        <div id="job" class="card">
+        <div id="job" class="cardbefore">
             <h3>Job & Volunteer Experience</h3>
         </div>
 
-        <div id="project" class="card">
+        <div id="project" class="cardbefore">
             <h3>Projects</h3>
         </div>
     </div>
@@ -96,16 +98,6 @@
             </svg>
         </a>
     </section>
-
-    <!-- <div id="aboutCard" class="bigCard">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#about">About</a>
-        <a href="#job">Job & Volunteer Experience</a>
-        <a href="#project">Projects</a>
-        <a href="#contact">Contact</a>
-    </div> -->
-
-
 
     <script src="personal.js"></script>
 
