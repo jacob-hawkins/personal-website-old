@@ -17,7 +17,8 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
-  
+
+/* top bar */
 nav {
     display: grid;
     grid-template-columns: calc(100vw - 95px) 45px 45px;
@@ -37,8 +38,10 @@ nav span {
     margin-top: -5px;
 }
 
-nav span:hover {
-    transition: 0.4s ease-out;
+nav a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
 .line1 {
@@ -52,30 +55,13 @@ nav span:hover {
     cursor: pointer;
 }
 
-.line1:hover #a {
-    display: none;
-}
-
 .line1 #b {
     display: none;
 }
 
-.line1:hover #b {
-    display: inline-block;
-    cursor: pointer;
-
-    padding-left: 20px;
-    animation: arrow 1.5s infinite;
-}
 
 @keyframes arrow {
     50%  {transform: translateX(8px)}
-}
-
-a {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
 }
 
 #toplink1 {
@@ -89,28 +75,17 @@ a {
 }
 
 #linkedin {
-    /* display: inline-block; */
     height: 45px;
     margin-top: 3px;
 }
 
-#linkedin:hover {
-    fill: #0077b5;
-    transition: 0.2s ease-out;
-}
-
 #github {
-    /* display: block; */
     height: 45px;
     width: auto;
     margin-top: 3px;
 }
 
-#github:hover {
-    fill: #6e5494;
-    transition: 0.2s ease-out;
-}
-
+/* side nav */
 .sidenav {
     height: 100%;
     width: 0;
@@ -134,10 +109,6 @@ a {
     display: block;
 }
   
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-  
 .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -152,43 +123,46 @@ a {
     .sidenav a {font-size: 18px;}
 }
 
+/* main title */
 .title {
     font-family: 'Rock Salt', cursive;
     font-size: 8rem;
-    /* color: #e6e6e6; */
 
     text-shadow: 0 0 0.25em #a6a6a6;
 }
 
-#title {
+.title-section {
     position: absolute;
-    top: 42%;
+    height: 60vh;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+#first {
+    position: absolute;
     left: 42%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, 0);
     z-index: 2;
 }
 
-#title2 {
+#last {
     position: absolute;
-    top: 57%;
     left: 58%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, 35%);
     z-index: 2;
 }
 
-/* #shadow {
-    display: inline-block;
-    width: 500px;
-    height: 100px;
-    z-index: -1;
-    background-color: white;
-    margin-top: 60vh;
-    margin-left: 35vw;
-    transform: perspective(4em) rotateX(40deg) scale(1,0.6);
-    filter: blur(2em)
-} */
+#arrow {
+    display: none;
+}
 
-#grid {
+@keyframes arrow2 {
+    50%  {transform: translateY(8px)}
+}
+
+/* cards */
+#card-grid {
     margin: 5rem auto;
     width: min(90%, 75rem);
     display: grid;
@@ -196,24 +170,15 @@ a {
     gap: 1rem;
 }
 
-.cardbefore {
+.card-before {
     width: 100%;
-    background-color: #2d3436;
+    border: white 1px solid;
     border-radius: 20px;
     cursor: pointer;
+    transition: ease-in 0.2s;
 }
 
-.cardbefore:hover {
-    background-color: #636e72;
-}
-
-@media (min-width: 55em) {
-    #grid {
-        grid-template-columns:  33% 33% 33%;
-    }
-}
-
-#grid div h3 {
+#card-grid div h3 {
     font-size: 2.5em;
     text-align: center;
 }
@@ -223,38 +188,49 @@ section h3 {
     text-align: center;
 }
 
-#bottomlink1 {
-    margin-left: 41.5vw;
-    margin-bottom: 30px;
+/* contact */
+.contact a {
+    text-decoration: none;
 }
 
-#bottomlink2 {
-    margin-left: 2vw;
-    margin-bottom: 30px;
+
+
+#contact-grid {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    width: 35vw;
+    grid-auto-flow: row;
+    gap: 0.5rem;
 }
 
-#github2 {
-    width: 7vw;
+#contact-github {
+    width: 125px;
     height: auto;
-    transform: translatey(-5px);
 }
 
-#linkedin2 {
-    width: 10vw;
+#contact-linkedin {
+    width: 150px;
     height: auto;
 }
 
-.card img {
-    border-radius: 100%;
-    display: block;
-    position: fixed;
-    height: 30vh;
-    width: auto;
-    margin-right: 60vw;
-    margin-top: 25vh;
+#email-svg {
+    width: 40px;
+    height: auto;
+    text-decoration: none;
 }
 
-
+#email-title {
+    display: inline-block;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 0;
+    transform: translateY(-9px);
+}
 
 
 /* pop up card */
@@ -263,8 +239,9 @@ section h3 {
     height: 80vh;
     display: block;
     position: fixed;
-    background-color: #2d3436;
-    left: 50%;
+    background-color: black;
+    border: none;
+    left: 50vw;
     top: 10vh;
     transform: translate(-50%);
     border-radius: 50px;
@@ -275,11 +252,10 @@ section h3 {
 
 
 .card .closeCard {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    font-size: 50px;
     transition: 0.5s;
 }
 
@@ -291,6 +267,162 @@ section h3 {
     display: block;
 }
 
-.card a:hover {
-    color: #f1f1f1;
+@media (min-width: 55em) {
+    #card-grid {
+        grid-template-columns:  33% 33% 33%;
+    }
+}
+
+@media (min-width: 35em) {
+    #contact-grid {
+        grid-template-columns: 145px 160px 160px;
+        gap: 0;
+    }
+}
+
+.card-p {
+    display: block;
+    font-size: 2vw;
+    margin-left: 5vw;
+    width: 95%;
+}
+
+.card-p--Title {
+    display: block;
+    font-size: 3vw;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: -25px;
+}
+
+.card-p--About {
+    display: block;
+    font-size: 2vw;
+    margin-left: 30vw;
+    width: 65%;
+}
+
+.card-h3 {
+    display: block;
+    font-size: 4rem;
+    margin-left: 5vw;
+}
+
+/* about card */
+#aboutCard img {
+    border-radius: 100%;
+    display: inline-block;
+    position: fixed;
+    height: auto;
+    width: 17vw;
+    margin-left: 5vw;
+}
+
+/* job card */
+#jobCard::-webkit-scrollbar {
+    overflow: scroll;
+    width: 5px;
+}
+
+#jobCard::-webkit-scrollbar-track {
+    background-color: none;
+    width: 10px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 40px; */
+}
+
+#jobCard::-webkit-scrollbar-thumb {
+    background-color: #818181;
+    border-radius: 50px;
+    background-clip: padding-box;
+}
+
+
+/* mobile support */
+/* tablets */
+@media (max-width: 1024px) {
+    .card-p {
+        font-size: 4vw;
+    }
+}
+
+/* phones */
+@media (max-width: 640px) {
+    .title {
+        font-family: 'Rock Salt', cursive;
+        font-size: 3rem;
+    
+        text-shadow: 0 0 0.25em #a6a6a6;
+    }
+    
+    .title-section {
+        position: absolute;
+        height: 60vh;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+    
+    #first {
+        position: absolute;
+        left: 42%;
+        top: 30%;
+        transform: translate(-50%, -35%);
+        z-index: 2;
+    }
+    
+    #last {
+        position: absolute;
+        left: 58%;
+        top: 30%;
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+    
+    #arrow {
+        display: block;
+        color: white;
+        margin: 0;
+        text-align: center;
+        margin-top: 90%;
+        animation: arrow2 1.5s infinite;
+    }
+}
+
+/* disable hover for mobile */
+@media (hover: hover) {
+    .card a:hover { color: #f1f1f1; }
+    .card-before:hover { background-color: white; color: black; }
+    .sidenav a:hover { color: #f1f1f1; }
+    .line1:hover #b {
+        display: inline-block;
+        cursor: pointer;
+    
+        padding-left: 20px;
+        animation: arrow 1.5s infinite;
+    }
+    .line1:hover #a { display: none; }
+    #github:hover { fill: #6e5494; transition: 0.2s ease-out; }
+    #linkedin:hover { fill: #0077b5; transition: 0.2s ease-out; }
+    nav span:hover { transition: 0.4s ease-out; }
+  }
+
+/* mobile card */
+/* .card--mobile {
+    
+} */
+
+#aboutImg--mobile {
+    border-radius: 100%;
+    height: 20vh;
+    width: auto;
+    margin-left: 25vw;
+}
+
+.aboutP--mobile {
+    color: white;
+    font-size: 1.5rem;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
 }
