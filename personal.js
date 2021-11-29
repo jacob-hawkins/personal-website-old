@@ -6,6 +6,10 @@ var cOpen2 = false;
 
 function openNav() {
     if (open == false) {
+        if (cOpen == true) { closeCard(); }
+        if (cOpen1 == true) { closeCard1(); }
+        if (cOpen2 == true) { closeCard2(); }
+
         document.getElementById("mySidenav").style.width = "250px";
         open = true;
     }
@@ -20,6 +24,10 @@ function closeNav() {
 
 function openCard() {
     if (window.innerWidth > 640) {
+        if (open == true) { closeNav(); }
+        if (cOpen1 == true) { closeCard1(); }
+        if (cOpen2 == true) { closeCard2(); }
+
         if (cOpen == false) {
             document.getElementById("aboutCard").style.width = "87vw";
             document.getElementById("aboutCard").style.border = "white 1px solid";
@@ -70,6 +78,10 @@ function closeCard() {
 
 function openCard1() {
     if (window.innerWidth > 640) {
+        if (open == true) { closeNav(); }
+        if (cOpen == true) { closeCard(); }
+        if (cOpen2 == true) { closeCard2(); }
+
         if (cOpen1 == false) {
             document.getElementById("jobCard").style.width = "87vw";
             document.getElementById("jobCard").style.border = "white 1px solid";
@@ -146,6 +158,10 @@ function closeCard1() {
 
 function openCard2() {
     if (window.innerWidth > 640) {
+        if (open == true) { closeNav(); }
+        if (cOpen == true) { closeCard(); }
+        if (cOpen1 == true) { closeCard1(); }
+
         if (cOpen2 == false) {
             document.getElementById("projectCard").style.width = "87vw";
             document.getElementById("projectCard").style.border = "white 1px solid";
