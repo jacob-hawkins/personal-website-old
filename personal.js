@@ -6,10 +6,6 @@ var cOpen2 = false;
 
 function openNav() {
     if (open == false) {
-        if (cOpen == true) { closeCard(); }
-        if (cOpen1 == true) { closeCard1(); }
-        if (cOpen2 == true) { closeCard2(); }
-
         document.getElementById("mySidenav").style.width = "250px";
         document.body.style.overflow = "hidden";
         open = true;
