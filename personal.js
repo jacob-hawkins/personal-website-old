@@ -11,6 +11,7 @@ function openNav() {
         if (cOpen2 == true) { closeCard2(); }
 
         document.getElementById("mySidenav").style.width = "250px";
+        document.body.style.overflow = "hidden";
         open = true;
     }
 }
@@ -18,6 +19,7 @@ function openNav() {
 function closeNav() {
     if (open == true) {
         document.getElementById("mySidenav").style.width = "0px";
+        document.body.style.overflow = "scroll";
         open = false;
     }
 }
