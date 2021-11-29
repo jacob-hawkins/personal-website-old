@@ -327,8 +327,8 @@ section h3 {
 #jobCard::-webkit-scrollbar-track {
     background-color: none;
     width: 10px;
-    /* margin-top: 40px; */
-    /* margin-bottom: 40px; */
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #jobCard::-webkit-scrollbar-thumb {
@@ -411,11 +411,7 @@ section h3 {
     nav span:hover { transition: 0.4s ease-out; }
   }
 
-/* mobile card */
-/* .card--mobile {
-    
-} */
-
+/* mobile cards */
 #aboutImg--mobile {
     border-radius: 100%;
     height: 20vh;
@@ -431,13 +427,13 @@ section h3 {
     margin-right: 10%;
 }
 
-.jobP--mobile {
+.cardP--mobile {
     font-size: 1.5rem;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.jobP--Title {
+.cardP--Title {
     font-size: 2rem;
     margin-bottom: 0;
 }

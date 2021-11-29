@@ -94,8 +94,8 @@ function openCard1() {
             document.getElementById("job").style.height = "2400px";
             document.getElementById("job").innerHTML =
                 '<h3 >Job & Volunteer Experience</h3>' +
-                '<div class="jobP--mobile">' +
-                '<h6 class="jobP--Title">TJ Maxx</h6>' +
+                '<div class="cardP--mobile">' +
+                '<h6 class="cardP--Title">TJ Maxx</h6>' +
                 '<p>Retail Associate </p>' +
                 '<blockquote>' +
                 '<p>• Responsible for and assisted in the operation of the Men’s, Kid’s and Home department making sure it' +
@@ -105,7 +105,7 @@ function openCard1() {
                 '• Maintained a consistent customer experience through the COVID-19 pandemic.</p>' +
                 '</blockquote>' +
 
-                '<h6 class="jobP--Title">Carolina Mountain Mission</h6><br>' +
+                '<h6 class="cardP--Title">Carolina Mountain Mission</h6><br>' +
                 '<blockquote>' +
                 '<p>• Worked with local community members in need building decks and ramps, painting houses, and' +
                 'landscaping.<br>' +
@@ -114,7 +114,7 @@ function openCard1() {
                 'customers.</p >' +
                 '</blockquote >' +
 
-                '<h6 class="jobP--Title" > Compassion Ministries</h6 > <br>' +
+                '<h6 class="cardP--Title" > Compassion Ministries</h6 > <br>' +
                 '<blockquote>' +
                 '<p>• Participated in multiple large-scale food pantries in the Knoxville and greater East Tennessee area' +
                 'serving hundreds of families and was responsible for specific food stations to pass out food to the' +
@@ -167,12 +167,10 @@ function openCard2() {
         }
 
         if (cOpen2 == false) {
-            document.getElementById("project").style.height = "1000px";
+            document.getElementById("project").style.height = "200px";
             document.getElementById("project").innerHTML =
-                '<h3>About Me</h3>' +
-                '<img src="photos/IMG_9008.jpg" alt="me" id="aboutImg--mobile">' +
-                '<p class="aboutP--mobile">Hello! My name is Jacob Hawkins! I am a computer science major at the University of Tennessee. I am apart of the Grand Cooke Engineering Honors Program and will soon be working with the upcoming web development club here at UT.</p>' +
-                '<p class="aboutP--mobile">I am from Knoxville, Tennessee and have been a Tennessee fan since I was born. In my free time, I enjoy offroad driving, spikeball, and fishing.</p>';
+                '<h3>Project</h3>' +
+                '<p class="cardP--mobile" style="text-align: center;">coming soon</p>';
 
             cOpen2 = true;
         } else if (cOpen2 == true) {
