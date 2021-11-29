@@ -426,3 +426,14 @@ section h3 {
     margin-left: 10%;
     margin-right: 10%;
 }
+
+.jobP--mobile {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.jobP--Title {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
