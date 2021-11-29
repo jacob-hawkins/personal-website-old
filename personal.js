@@ -109,7 +109,7 @@ function openCard1() {
                 '<blockquote>' +
                 '<p>• Worked with local community members in need building decks and ramps, painting houses, and' +
                 'landscaping.<br>' +
-                '• Participated in a large - scale food pantry serving customers being responsible for walking' +
+                '• Participated in a large-scale food pantry serving customers being responsible for walking' +
                 'customers through the service line and stationed at specific food stations to pass out food to the' +
                 'customers.</p >' +
                 '</blockquote >' +
