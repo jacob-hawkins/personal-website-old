@@ -344,6 +344,10 @@ section h3 {
     .card-p {
         font-size: 4vw;
     }
+
+    .sidenav a {
+        color: white;
+    }
 }
 
 /* phones */
