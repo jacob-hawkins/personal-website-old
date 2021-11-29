@@ -169,7 +169,7 @@ function openCard2() {
         if (cOpen2 == false) {
             document.getElementById("project").style.height = "200px";
             document.getElementById("project").innerHTML =
-                '<h3>Project</h3>' +
+                '<h3>Projects</h3>' +
                 '<p class="cardP--mobile" style="text-align: center;">coming soon</p>';
 
             cOpen2 = true;
